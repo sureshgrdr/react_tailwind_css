@@ -5,9 +5,8 @@ import Timer from "./pages/Timer";
 function App() {
   return (
     <>
-      <div className='container'>
+      <div className="container">
         <NavBar />
-        <div>I Hat u</div>
         <Timer />
       </div>
     </>

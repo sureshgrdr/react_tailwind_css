@@ -5,10 +5,22 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  padding: 0;
-  margin: 0;
+@layer components {
+  .btn {
+    @apply active:translate-y-1 rounded-full bg-neutral-800 text-white p-2 w-24 hover:bg-blue-600 drop-shadow-md;
+  }
 }
+
+/* #root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+} */
+
 /* ScrollBar */
 ::-webkit-scrollbar {
   width: 20px;

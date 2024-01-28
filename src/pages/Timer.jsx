@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function Timer() {
+  const [toggler, setToggler] = useState(true);
   let time = 300;
   let timerId;
   const timer = () => {
@@ -21,36 +22,31 @@ export default function Timer() {
   };
   if (timerId) clearInterval(timerId);
 
-  const toggleBtn = (btn) => {
-    let toggle = document.querySelector(`.${btn}`);
-    toggle.style.display === "none"
-      ? (toggle.style.display = "block")
-      : (toggle.style.display = "none");
-    console.log(toggle);
-  };
-
   return (
     <div>
       <p className="disTime">00:00</p>
       <br />
-      <button
-        className="btn startBtn"
-        onClick={() => {
-          timerId = timer();
-          toggleBtn("startBtn");
-        }}
-      >
-        ◷ Start
-      </button>
-      <button
-        className="btn stopBtn"
-        onClick={() => {
-          clearInterval(timerId);
-          toggleBtn("stopBtn");
-        }}
-      >
-        ⊗ Stop
-      </button>
+      {toggler ? (
+        <button
+          className="btn startBtn"
+          onClick={() => {
+            setToggler(false);
+            timerId = timer();
+          }}
+        >
+          ◷ Start
+        </button>
+      ) : (
+        <button
+          className="btn stopBtn"
+          onClick={() => {
+            setToggler(true);
+            clearInterval(timerId);
+          }}
+        >
+          ⊗ Stop
+        </button>
+      )}
     </div>
   );
 }

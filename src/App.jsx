@@ -1,13 +1,19 @@
 import "./App.css";
 import { NavBar } from "./Components/NavBar";
-import Timer from "./pages/Timer";
+import { Counter } from "./apps/Counter";
+import { NoteList } from "./apps/NoteList";
+import Timer from "./apps/Timer";
 
 function App() {
   return (
     <>
-      <div className="container">
+      <div className="container ">
         <NavBar />
-        <Timer />
+        <div className="flex flex-row md:flex flex-wrap justify-center items-center">
+          <Timer />
+          <NoteList />
+          <Counter />
+        </div>
       </div>
     </>
   );

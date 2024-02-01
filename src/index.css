@@ -7,7 +7,10 @@
 
 @layer components {
   .btn {
-    @apply active:translate-y-1 rounded-full bg-neutral-800 text-white p-2 w-24 m-1 hover:bg-blue-600 drop-shadow-md;
+    @apply active:translate-y-1 rounded-full bg-neutral-800 text-white p-2 w-24 m-1 hover:bg-blue-600 drop-shadow-md font-medium;
+  }
+  .appUI {
+    @apply shadow-lg min-w-96 bg-neutral-900/60 text-white flex flex-col justify-center items-center p-8 m-4 rounded-3xl 	select-none;
   }
 }
 * {
@@ -24,17 +27,23 @@ body {
   padding: 0;
 } */
 
-/* ScrollBar */
+/* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 
+/* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
+  background: #f1f1f1;
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
+  background: #888;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

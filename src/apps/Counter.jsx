@@ -25,7 +25,7 @@ export const Counter = () => {
       <br />
       <p className="text-3xl text-orange-400 font-semibold">{count}</p>
       <br />
-      <div>
+      <div className="flex flex-row flex-wrap justify-center items-center">
         <button className="btn" onClick={() => dispatch("increament")}>
           Add
         </button>

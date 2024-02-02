@@ -86,11 +86,11 @@ export default function Timer() {
       <p className="text-4xl font-bold">⏲️ Timer</p>
       <br />
 
-      <p className="disTime text-3xl text-orange-400 font-semibold"></p>
+      <p className="disTime text-3xl font-semibold text-orange-400"></p>
       <br />
-      <div className="flex flex-row flex-wrap gap-5 w-full justify-between">
+      <div className="container grid grid-cols-2 justify-center gap-2 px-4">
         <select
-          className="optionTimer  rounded-2xl text-black px-1 py-1 cursor-pointer"
+          className="optionTimer  cursor-pointer rounded-2xl px-1 py-1 text-black"
           onChange={(e) => OptionTimer(e.target.value)}
           defaultValue={"Select"}
         >
@@ -101,7 +101,7 @@ export default function Timer() {
           {timings.map((item, i) => {
             return (
               <option
-                className="text-black p-2 rounded-lg cursor-pointer "
+                className="cursor-pointer rounded-lg p-2 text-black "
                 key={i}
                 value={item.ctime}
               >
@@ -111,7 +111,7 @@ export default function Timer() {
           })}
         </select>
         <input
-          className="inputTime text-black p-1 px-4 rounded-2xl cursor-pointer "
+          className="inputTime cursor-pointer rounded-2xl p-1 px-4 text-black "
           type="time"
           onChange={(e) => inputTimer(e)}
         />

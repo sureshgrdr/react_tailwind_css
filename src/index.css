@@ -7,25 +7,18 @@
 
 @layer components {
   .btn {
-    @apply active:translate-y-1 rounded-full bg-neutral-800 text-white p-2 w-24 m-1 hover:bg-blue-600 drop-shadow-md font-medium;
+    @apply m-1 rounded-full bg-neutral-600 p-2 px-10 font-medium text-white drop-shadow-md hover:bg-blue-600 active:translate-y-1;
   }
   .appUI {
-    @apply shadow-lg min-w-96 bg-neutral-900/60 text-white flex flex-col justify-center items-center p-8 m-4 rounded-3xl 	select-none;
+    @apply m-4 flex min-w-80  select-none flex-col flex-wrap items-center justify-center rounded-3xl bg-neutral-900/60 p-8 text-white shadow-lg;
   }
 }
 * {
   @apply transition-colors duration-200;
 }
-
-/* #root {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-} */
+  background-color: #404040;
+}
 
 /* width */
 ::-webkit-scrollbar {

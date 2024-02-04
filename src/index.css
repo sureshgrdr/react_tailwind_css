@@ -20,10 +20,13 @@
 
 @layer components {
   .btn {
-    @apply bg-clr-bkg text-clr-fnt m-1 rounded-full p-2 px-10 font-medium drop-shadow-md hover:bg-blue-600 active:translate-y-1;
+    @apply m-1 flex items-center justify-center rounded-full bg-clr-bkg p-2 px-10 font-medium text-clr-fnt drop-shadow-md hover:bg-blue-600 active:translate-y-1;
+  }
+  .btn-mini {
+    @apply m-1 flex items-center justify-center rounded-full bg-clr-bkg p-2 text-clr-fnt  drop-shadow-md hover:bg-blue-600 active:translate-y-1;
   }
   .appUI {
-    @apply bg-clr-acnt/60 text-clr-fnt m-4  flex min-w-80 select-none flex-col flex-wrap items-center justify-center rounded-3xl p-8 shadow-lg;
+    @apply m-4 flex min-w-80  select-none flex-col flex-wrap items-center justify-center rounded-3xl bg-clr-acnt/60 p-8 text-clr-fnt shadow-lg;
   }
 }
 * {

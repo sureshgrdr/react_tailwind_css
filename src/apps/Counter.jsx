@@ -23,9 +23,9 @@ export const Counter = () => {
     <div className="appUI">
       <p className="text-4xl font-bold">🎉 Counter</p>
       <br />
-      <p className="text-3xl text-orange-400 font-semibold">{count}</p>
+      <p className="text-3xl font-semibold text-orange-400">{count}</p>
       <br />
-      <div className="flex flex-row flex-wrap justify-center items-center">
+      <div className="flex flex-row flex-wrap items-center justify-center">
         <button className="btn" onClick={() => dispatch("increament")}>
           Add
         </button>

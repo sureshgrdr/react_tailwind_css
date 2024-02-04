@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-const timings = [
-  { tname: "00 : 05 : 00 ", ctime: 300 },
-  { tname: "00 : 10 : 00 ", ctime: 600 },
-  { tname: "00 : 15 : 00 ", ctime: 900 },
-  { tname: "00 : 20 : 00 ", ctime: 1200 },
-];
+import timings from "../assets/data";
 
 let beepsound = new Audio(
   "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/pause.wav",
@@ -82,7 +76,7 @@ export default function Timer() {
   };
 
   return (
-    <div className="appUI ">
+    <div className="appUI">
       <p className="text-4xl font-bold">⏲️ Timer</p>
       <br />
 
@@ -90,7 +84,7 @@ export default function Timer() {
       <br />
       <div className="container grid grid-cols-2 justify-center gap-2 px-4">
         <select
-          className="optionTimer  cursor-pointer rounded-2xl px-1 py-1 text-black"
+          className="optionTimer  cursor-pointer rounded-2xl bg-clr-bkg px-2 py-1 text-clr-fnt"
           onChange={(e) => OptionTimer(e.target.value)}
           defaultValue={"Select"}
         >
@@ -101,7 +95,7 @@ export default function Timer() {
           {timings.map((item, i) => {
             return (
               <option
-                className="cursor-pointer rounded-lg p-2 text-black "
+                className="cursor-pointer rounded-lg p-2 text-black text-clr-fnt "
                 key={i}
                 value={item.ctime}
               >
@@ -111,25 +105,25 @@ export default function Timer() {
           })}
         </select>
         <input
-          className="inputTime cursor-pointer rounded-2xl p-1 px-4 text-black "
+          className="inputTime cursor-pointer rounded-2xl bg-clr-bkg p-1 px-4 text-clr-fnt "
           type="time"
           onChange={(e) => inputTimer(e)}
         />
       </div>
 
       <br />
-      <div>
+      <div className="flex flex-row">
         {toggler ? (
           <button className="btn bg-green-600" onClick={startTimer}>
-            ⫸
+            <span className="material-symbols-outlined">play_arrow</span>
           </button>
         ) : (
           <button className="btn bg-red-500" onClick={stopTimer}>
-            ▢
+            <span className="material-symbols-outlined">stop</span>
           </button>
         )}
         <button className="btn hover:bg-red-500" onClick={resetTimer}>
-          ↻
+          <span className="material-symbols-outlined">restart_alt</span>
         </button>
       </div>
       {/* <button className="btn app-close-btn hover:bg-red-500 w-10 ">X</button> */}
